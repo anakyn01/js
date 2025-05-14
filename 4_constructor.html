@@ -6,9 +6,46 @@
     <title>4_생성자</title>
 </head>
 <body>
+<div class="" id="last"></div>
 <script>
-var txt = "전 어디서 나올지 예측할수 없스므니다";
-document.write(txt)
+function FreeTime(yes, nop, uu){
+this.yes = yes; this.nop = nop; this.uu = uu;
+}
+const choice = new FreeTime("good !", "ㅇ우 no", "흑흑ㅎㅎㅎ")
+document.getElementById("last").innerHTML =
+" 잠깐 쉴까요? " + choice.nop + "!";
+</script>
+
+<div class="" id="foodFind"></div>
+<script>
+function Lunch (one, two, three)  {this.one = one; this.two = two; this.three = three;}
+const eat = new Lunch("1) 밥","2) 빵", "3) 그냥..") //인스턴스 객체
+
+document.getElementById("foodFind").innerHTML =
+"오늘 점심은 " + eat.three +" 입니다";
+</script>
+
+<p><mark id="find"></mark></p>
+<script>
+
+//함수는 호출할때만 실행된다 함수이면서 생성자 무엇을 생성할지 규정
+function Person(first, last, age, eye){
+    //괄호안에 들어가는것 매개변수
+this.first = first;
+this.last = last;
+this.age = age;
+this.eye = eye;
+}
+
+const o = new Person("미은","오", 18, "blue");
+const c = new Person("하얀","최", 15, "sky");
+/*var txt = "전 어디서 나올지 예측할수 없스므니다";
+document.write(txt)*/
+
+document.getElementById("find").innerHTML =
+" 전 " + c.last + c.first + " 입니다" + "</br>" +
+" 저는 " + o.last + o.first + " 입니다" + "</br>" +
+" 저의 나이는 " + o.age + " 입니다"
 </script>
 <pre>
 객체생성자 
